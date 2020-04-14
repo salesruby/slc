@@ -13,7 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        'App\Console\Commands\FirstSMS',
+        'App\Console\Commands\SecondSMS',
+        'App\Console\Commands\ThirdSMS'
     ];
 
     /**
@@ -26,6 +28,9 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        $schedule->command('sms:one')
+            ->everyMinute();
     }
 
     /**
