@@ -33,6 +33,8 @@
     <!-- all pie chart -->
     <script src="{{asset('assets/js/pie-chart.js')}}"></script>
     <!-- others plugins -->
+
+    @yield('script')
     <script src="{{asset('assets/js/plugins.js')}}"></script>
     <script src="{{asset('assets/js/scripts.js')}}"></script>
 </body>
