@@ -11,8 +11,8 @@
                             <li class="active">
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>dashboard</span></a>
                                 <ul class="collapse">
-                                    <li class="active"><a href="">All Leads</a></li>
-                                    <li><a href="">Upload Leads</a></li>
+                                    <li class="active"><a href="{{route('lead')}}">All Leads</a></li>
+                                    <li><a href="{{route('import')}}">Upload Leads</a></li>
                                    
                                 </ul>
                             </li>

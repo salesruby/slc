@@ -20,8 +20,10 @@
     <link rel="stylesheet" href="{{asset('assets/css/default-css.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+    @yield('style')
     <!-- modernizr css -->
     <script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+
 </head>
 
 <body>
