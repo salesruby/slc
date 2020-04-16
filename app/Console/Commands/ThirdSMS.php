@@ -40,12 +40,19 @@ class ThirdSMS extends SMS
     {
         $leads = Lead::where([
             ['second_sms', 1],
+            ['third_sms', 0],
             ['stop', 'n'],
             ['created_at', '<=', Carbon::now()->subDay(3)],
-        ]);
+        ])->get();
 
         $status = 'third_sms';
-        $message = "Welcome to salesruby, home of great sales trainings part3";
-        $this->sendText($leads, $message, $status);
+        foreach ($leads as $lead){
+            $message = "Hello $lead->full_name \r\n".
+                "15 High Value Productivity Sessions and 6 other things you get from SLC video. Check email. To pay for videos Stanbic IBTC 0029240785 (SalesRuby Ltd)-N10,000
+                   ";
+
+            $this->sendText($lead, $message, $status);
+        }
+
     }
 }

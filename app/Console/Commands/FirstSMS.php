@@ -37,9 +37,18 @@ class FirstSMS extends SMS
      */
     public function handle()
     {
-        $leads = Lead::where('first_sms', 0);
+        $leads = Lead::where([
+            ['first_sms', 0],
+            ['stop', 'n'],
+        ])->get();
+
         $status = 'first_sms';
-        $message = "Welcome to salesruby, home of great sales trainings part1";
-        $this->sendText($leads, $message, $status);
+
+        foreach($leads as $lead){
+            $message = "Hello $lead->full_name, \r\n".
+                "Thanks for your interest in Sales Leadership Conference 2020 videos and slides. Please check email. The Free slides have been sent to you. Check spam if not found inbox.
+            ";
+            $this->sendText($lead, $message, $status);
+        }
     }
 }

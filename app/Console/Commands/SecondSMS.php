@@ -39,12 +39,19 @@ class SecondSMS extends SMS
     public function handle()
     {
         $leads = Lead::where([
-                            ['first_sms', 1],
-                            ['stop', 'n'],
-                            ['created_at', '<=', Carbon::now()->subDay()],
-                            ]);
+            ['first_sms', 1],
+            ['second_sms', 0],
+            ['stop', 'n'],
+            ['created_at', '<=', Carbon::now()->subDay()],
+        ])->get();
+
         $status = 'second_sms';
-        $message = "Welcome to salesruby, home of great sales trainings part2";
-        $this->sendText($leads, $message, $status);
+        foreach ($leads as $lead){
+            $message = "Hi $lead->full_name \r\n".
+                "Please check email. A link to download SLC slides has been sent. If not found, please check spam. To pay for videos Stanbic IBTC 0029240785 (SalesRuby Ltd)-N10,000";
+
+            $this->sendText($lead, $message, $status);
+        }
+
     }
 }

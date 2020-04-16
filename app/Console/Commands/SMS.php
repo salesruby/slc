@@ -41,16 +41,15 @@ class SMS extends Command
         //
     }
 
-    public function sendText($leads, $message, $status){
-
-        $leadsPhone = $leads->pluck('phone')->implode(',');
+    public function sendText($lead, $message, $status){
+        $phone = $lead->phone;
 
         $post_data=array(
             'sub_account'=>'7979_slc',
             'sub_account_pass'=>'slc2020',
             'action'=>'send_sms',
             'sender_id'=>'SalesRuby',
-            'recipients'=> $leadsPhone,
+            'recipients'=> $phone,
             'message'=>$message,
             'route' => 2
         );
@@ -77,7 +76,7 @@ class SMS extends Command
             elseif(!empty($json['error']))$msg=$json['error'];
             else
             {
-                $leads->update([$status => 1]);
+                $lead->update([$status => 1]);
                 $msg="SMS sent to ".$json['total']." recipient(s).";
                 $sms_batch_id=$json['batch_id'];
             }
