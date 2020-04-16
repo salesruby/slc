@@ -40,7 +40,7 @@
                                             </tr>
 
                                             @empty
-No Lead available Yet
+
                                             @endforelse
                                       
                                         
