@@ -57,6 +57,7 @@ return [
             'options' => array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]),
+//            'timezone' => '+00:00'
         ],
 
         'pgsql' => [
