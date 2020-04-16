@@ -23,13 +23,13 @@ Route::group(['middleware' => ['admin']], function(){
     Route::get('/dashboard', function () {
         return view('ui.index');
     });
-    
+
     Route::get('/import', function () {
         return view('ui.import');
     });
-    
+
     Route::get('/leads', 'Import@leads')->name('lead');
-    
+
     Route::post('/import', 'Import@import')->name('import');
     Route::post('/logout', 'AuthController@logout')->name('logout');
     Route::get('/logout', 'AuthController@logout')->name('logout');
@@ -43,3 +43,5 @@ Route::group(['middleware' => ['visitor']], function(){
     //Route::post('/register', 'AuthController@register')->name('register');
     Route::post('/login', 'AuthController@login')->name('login');
 });
+
+Route::get('/setup', 'SetupController@index');
