@@ -12,11 +12,11 @@
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
                             <!-- <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar"> -->
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">My Name <i class="fa fa-angle-down"></i></h4>
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">{{Sentinel::getUser()->full_name}} <i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Message</a>
                                 <a class="dropdown-item" href="#">Settings</a>
-                                <a class="dropdown-item" href="#">Log Out</a>
+                                <form class="dropdown-item" action="{{route('logout')}}" method="post">@csrf <button class="btn btn-primary" type="submit">Log Out </button> </form>
                             </div>
                         </div>
                     </div>
