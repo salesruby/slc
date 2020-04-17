@@ -17,6 +17,9 @@ class AddColumnToLeads extends Migration
             $table->string('first_sms')->default(0);
             $table->string('second_sms')->default(0);
             $table->string('third_sms')->default(0);
+            $table->string('second_mail')->default(0);
+            $table->string('third_mail')->default(0);
+            $table->string('fourth_mail')->default(0);
         });
     }
 
