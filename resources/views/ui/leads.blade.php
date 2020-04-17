@@ -11,7 +11,7 @@
 
 <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Data Table Default</h4>
+                                <h4 class="header-title">All Leads</h4>
                                 <div class="data-tables">
                                     <table id="dataTable" class="text-center">
                                         <thead class="bg-light text-capitalize">
@@ -20,10 +20,8 @@
                                                 <th>Email</th>
                                                 <th>Contact</th>
                                                 <th>Organisation</th>
-                                                <th>Sms Action</th>
-                                                <th>Sms Action</th>
-                                                <th>Email Action</th>
-                                                <th>Email Action</th>
+                                                <th>Action</th>
+                                                
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -33,10 +31,8 @@
                                                 <td>{{$lead->email}}</td>
                                                 <td>{{$lead->phone}}</td>
                                                 <td>{{$lead->organisation}}</td>
-                                                <td><button class="btn btn-danger">Stop SMS 1</button></td>
-                                                <td><button class="btn btn-danger">Stop SMS 2</button></td>
-                                                <td><button class="btn btn-danger">Stop Email 1</button></td>
-                                                <td><button class="btn btn-danger">Stop Email 2</button></td>
+                                                <td><a href="@if($lead->stop == 'y')#@else {{route('stop', $lead->id)}}@endif" class="btn @if($lead->stop == 'n') btn-danger @else btn-success @endif">@if($lead->stop == 'n') Stop Cadence @else Cadence Stopped @endif</a></td>
+                                              
                                             </tr>
 
                                             @empty
