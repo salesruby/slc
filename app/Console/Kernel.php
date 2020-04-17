@@ -15,7 +15,10 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         'App\Console\Commands\FirstSMS',
         'App\Console\Commands\SecondSMS',
-        'App\Console\Commands\ThirdSMS'
+        'App\Console\Commands\ThirdSMS',
+        'App\Console\Commands\SecondMail',
+        'App\Console\Commands\ThirdMail',
+        'App\Console\Commands\FourthMail'
     ];
 
     /**
