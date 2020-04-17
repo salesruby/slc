@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Sentinel;
+use App\Lead;
 
 class AuthController extends Controller
 {
@@ -31,6 +32,14 @@ class AuthController extends Controller
     public function logout(){
         Sentinel::logout();
         return redirect('/');
+
+    }
+
+    public function stop($id){
+      $lead = Lead::findorfail($id);
+      $lead->stop = 'y';
+      $lead->update();
+      return back()->with('success', 'Cadence Stopped Successfully');
 
     }
 }

@@ -33,6 +33,8 @@ Route::group(['middleware' => ['admin']], function(){
     Route::post('/import', 'Import@import')->name('import');
     Route::post('/logout', 'AuthController@logout')->name('logout');
     Route::get('/logout', 'AuthController@logout')->name('logout');
+
+    Route::get('/stop/{id}', 'AuthController@stop')->name('stop');
 });
 
 
