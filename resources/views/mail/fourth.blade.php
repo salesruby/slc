@@ -235,7 +235,7 @@
                                             <p>
                                                 Best Regards <br/>
                                                 Oyindamola Sofoluwe <br/>
-                                                Head, BMC, SalesRuby<br/>
+                                                Head, BGC, SalesRuby<br/>
                                                 ADD: 14, Amara Olu, Alausa, Ikeja Lagos
                                             </p>
 

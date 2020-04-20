@@ -7,21 +7,21 @@ use App\Mail\EmailCron;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
 
-class SecondMail extends Command
+class FirstMail extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'mail:second';
+    protected $signature = 'mail:first';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Second mail sent to slc leads';
+    protected $description = 'Sends first email to lead';
 
     /**
      * Create a new command instance.
@@ -41,16 +41,15 @@ class SecondMail extends Command
     public function handle()
     {
         $leads = Lead::where([
-            ['first_mail', 1],
-            ['second_mail', 0],
+            ['first_mail', 0],
             ['stop', 'n']
         ])->get();
 
-        $title = "Here Are Your FULL Slides from Sales Leadership Conference";
-        $message = "mail.second";
+        $title = "Your Subscription to Videos of Sales Leadership Conference by SalesRuby";
+        $message = "mail.first";
         foreach ($leads as $lead){
             Mail::to($lead->email)->send(new EmailCron($lead, $title, $message));
-            $lead->update(['second_mail' => 1]);
+            $lead->update(['first_mail' => 1]);
         }
         return response()->json('success', '200');
     }
