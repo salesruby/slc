@@ -229,7 +229,7 @@
                                                 and buy or by Bank Transfer: Account No:
                                                 Sales Ruby Ltd (0029240785) Stanbic IBTC.
                                                 Call us on the number below once you pay.<br/>
-                                                If you like to speak to a rep you may call: 09070047690
+                                                If you like to speak to a rep you may call: 09070047688
                                             </p>
 
                                             <p>

@@ -212,7 +212,7 @@
                                                                 href="https://events.salesruby.com/#free_slides">Click
                                                     here</a> or Transfer N10,000.00 to Stanbic IBTC
                                                 0029240785 (SalesRuby Ltd) and call us on the line below.
-                                                If you like to speak to a rep you may call: 09070047690
+                                                If you like to speak to a rep you may call: 09070047688
                                                 Now, you may download the slides <a rel="noopener noreferrer"
                                                                                     target="_blank"
                                                                                     href="https://drive.google.com/open?id=1kGPZkU-xFczl4CdCFEanOtt1Su2aB_5E">here</a>.

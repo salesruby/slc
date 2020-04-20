@@ -186,12 +186,12 @@
 
                                             <p>
                                                 In case you have not downloaded the FREE slides from this incredible conference which held for 2 days parading 15+ director-level
-                                                revenue leaders from the biggest companies in Nigeria, you can get your slides <a rel="noopener noreferrer" target="_blank" href="https://drive.google.com/open?id=1kGPZkU-xFczl4CdCFEanOtt1Su2aB_5E">here</>.<br />
+                                                revenue leaders from the biggest companies in Nigeria, you can get your slides <a rel="noopener noreferrer" target="_blank" href="https://drive.google.com/open?id=1kGPZkU-xFczl4CdCFEanOtt1Su2aB_5E">here</a>.<br />
                                                 <a a rel="noopener noreferrer" target="_blank" href="https://drive.google.com/open?id=1kGPZkU-xFczl4CdCFEanOtt1Su2aB_5E"><strong>Get slides from SLC2020 here FREE OF CHARGE</strong></a><br />
                                                 Additionally, you should get the videos at a token amount of N10,000 right now. {{$lead['full_name']}}, this amount will go up after this COVID Lockdown. <br />
                                                 If I were you, I would use these videos to pump up myself and my team mates at work so we can together capture POST-COVID opportunities aggressively.<br />
                                                 To Pay Now – <a rel="noopener noreferrer" target="_blank" href="https://events.salesruby.com/#free_slides">Click here</a> or Transfer N10,000.00 to Stanbic IBTC 0029240785 (SalesRuby Ltd) and call us on the line below.<br />
-                                                If you like to speak to a rep you may call: 09070047690 <br />
+                                                If you like to speak to a rep you may call: 09070047688 <br />
                                             </p>
                                             <p>
                                                 <strong>Now, you may download the slides <a a rel="noopener noreferrer" target="_blank" href="https://drive.google.com/open?id=1kGPZkU-xFczl4CdCFEanOtt1Su2aB_5E">here.</a></strong><br />
