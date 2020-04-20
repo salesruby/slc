@@ -46,4 +46,9 @@ Route::group(['middleware' => ['visitor']], function(){
     Route::post('/login', 'AuthController@login')->name('login');
 });
 
+
+Route::get('/dhhdyhdgdgydhdnhdgklshe67378-{id}', 'Import@unsub')->name('unsub');
+
+Route::get('/dhhdyhdjj4jhgmddkkdnhe67378-{id}', 'Import@sub')->name('sub');
+// Route::get('/check/{id}', 'Import@check');
 Route::get('/setup', 'SetupController@index');
