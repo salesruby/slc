@@ -31,4 +31,28 @@ class Import extends Controller
         $leads = Lead::orderBy('id', 'desc')->get();
         return view('ui.leads')->with('leads', $leads);
     }
+
+    public function unsub($id){
+        $lead = Lead::findorfail($id);
+      
+           $lead->stop = 'y';
+           $lead->update();
+           return $lead->full_name . ' you have successfully unsubscribed from receiving mails from us';
+      
+    }
+
+    public function sub($id){
+        $lead = Lead::findorfail($id);
+      
+        
+        $lead->stop = 'n';
+        $lead->update();
+        return $lead->full_name . ' Thank you for subscribing to receiving mails from us';  
+       
+    }
+
+    public function check($id){
+       $lead = Lead::findorfail($id);
+       return view('mail.second')->with('lead', $lead);
+    }
 }
