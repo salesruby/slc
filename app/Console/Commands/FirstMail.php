@@ -43,7 +43,8 @@ class FirstMail extends Command
         $leads = Lead::where([
             ['first_mail', 0],
             ['stop', 'n']
-        ])->get();
+        ])->limit(5)->get();
+
 
         $title = "Your Subscription to Videos of Sales Leadership Conference by SalesRuby";
         $message = "mail.first";

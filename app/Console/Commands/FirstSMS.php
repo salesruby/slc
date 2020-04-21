@@ -39,8 +39,8 @@ class FirstSMS extends SMS
     {
         $leads = Lead::where([
             ['first_sms', 0],
-            ['stop', 'n'],
-        ])->get();
+            ['stop', 'n']
+        ])->limit(5)->get();
 
         $status = 'first_sms';
 

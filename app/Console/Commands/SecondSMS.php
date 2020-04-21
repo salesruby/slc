@@ -42,8 +42,8 @@ class SecondSMS extends SMS
             ['first_sms', 1],
             ['second_sms', 0],
             ['stop', 'n'],
-            ['created_at', '<=', Carbon::now()->subDay()],
-        ])->get();
+            ['created_at', '<=', Carbon::now()->subDay()]
+        ])->limit(10)->get();
 
         $status = 'second_sms';
         foreach ($leads as $lead){

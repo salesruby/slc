@@ -45,8 +45,8 @@ class ThirdMail extends Command
             ['second_mail', 1],
             ['third_mail', 0],
             ['stop', 'n'],
-            ['created_at', '<=', Carbon::now()->subDay()],
-        ])->get();
+            ['created_at', '<=', Carbon::now()->subDay()]
+        ])->limit(20)->get();
 
         $title = "Have You Got Your Slides & Videos?";
         $message = "mail.third";

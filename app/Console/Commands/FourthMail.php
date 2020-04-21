@@ -45,8 +45,8 @@ class FourthMail extends Command
             ['third_mail', 1],
             ['fourth_mail', 0],
             ['stop', 'n'],
-            ['created_at', '<=', Carbon::now()->subDay(3)],
-        ])->get();
+            ['created_at', '<=', Carbon::now()->subDay(3)]
+        ])->limit(20)->get();
 
         $title = "Here Is What You Have Been Missing";
         $message = "mail.fourth";

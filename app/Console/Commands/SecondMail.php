@@ -44,7 +44,7 @@ class SecondMail extends Command
             ['first_mail', 1],
             ['second_mail', 0],
             ['stop', 'n']
-        ])->get();
+        ])->limit(10)->get();
 
         $title = "Here Are Your FULL Slides from Sales Leadership Conference";
         $message = "mail.second";

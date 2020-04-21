@@ -42,8 +42,8 @@ class ThirdSMS extends SMS
             ['second_sms', 1],
             ['third_sms', 0],
             ['stop', 'n'],
-            ['created_at', '<=', Carbon::now()->subDay(3)],
-        ])->get();
+            ['created_at', '<=', Carbon::now()->subDay(3)]
+        ])->limit(20)->get();
 
         $status = 'third_sms';
         foreach ($leads as $lead){
