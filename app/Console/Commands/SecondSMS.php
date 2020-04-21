@@ -48,8 +48,9 @@ class SecondSMS extends SMS
         $status = 'second_sms';
         foreach ($leads as $lead){
             $message = "Hi $lead->full_name \r\n".
-                "Please check email. A link to download SLC slides has been sent. If not found, please check spam. To pay for videos Stanbic IBTC 0029240785 (SalesRuby Ltd)-N10,000";
-
+                "Please check email. A link to download SLC slides has been sent. If not found, please check spam. To pay for videos Stanbic IBTC 0029240785 (SalesRuby Ltd)-N10,000
+                 \r\n".
+                "For more info please contact 09070047691 or 09070047690";
             $this->sendText($lead, $message, $status);
         }
 

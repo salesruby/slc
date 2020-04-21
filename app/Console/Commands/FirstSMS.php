@@ -47,7 +47,8 @@ class FirstSMS extends SMS
         foreach($leads as $lead){
             $message = "Hello $lead->full_name, \r\n".
                 "Thanks for your interest in Sales Leadership Conference 2020 videos and slides. Please check email. The Free slides have been sent to you. Check spam if not found inbox.
-            ";
+            \r\n".
+            "For more info please contact 09070047691 or 09070047690";
             $this->sendText($lead, $message, $status);
         }
     }

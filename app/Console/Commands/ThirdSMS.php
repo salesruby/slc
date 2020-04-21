@@ -49,7 +49,8 @@ class ThirdSMS extends SMS
         foreach ($leads as $lead){
             $message = "Hello $lead->full_name \r\n".
                 "15 High Value Productivity Sessions and 6 other things you get from SLC video. Check email. To pay for videos Stanbic IBTC 0029240785 (SalesRuby Ltd)-N10,000
-                   ";
+                   \r\n".
+            "For more info please contact 09070047691 or 09070047690";
 
             $this->sendText($lead, $message, $status);
         }

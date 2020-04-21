@@ -234,15 +234,15 @@
                     <!-- END MAIN CONTENT AREA -->
 
                     <tr>
-                      <td style="text-align:center; padding:2rem;">
-                        <div>
-                        @if($lead->stop == 'n')
-                          <a href="{{route('unsub', $lead->id)}}" style="color:#fff; padding:.5rem; text-align:center; text-decoration:none; font-size: 1.5rem; background-color:red">Unsubscribe</a>
-                          @else
-                          <a href="{{route('sub', $lead->id)}}" style="color:#fff; padding:.5rem; text-decoration:none; text-align:center; font-size: 1.5rem; background-color:green">Subscribe</a>
-                          @endif
-                        </div>
-                      </td>
+                        <td style="text-align:center; padding:2rem;">
+                            <div>
+                                @if($lead->stop == 'n')
+                                    <a href="{{route('unsub', $lead->id)}}" style="color:red; padding:0.5rem; text-align:center; text-decoration:none; font-size: 0.7rem; background-color:#fff; border-radius:5px; border:red thin solid;">Unsubscribe</a>
+                                @else
+                                    <a href="{{route('sub', $lead->id)}}" style="color:#fff; padding:0.5rem; text-decoration:none; text-align:center; font-size: 0.7rem; background-color:green; border-radius:5px;">Subscribe</a>
+                                @endif
+                            </div>
+                        </td>
                     </tr>
                 </table>
                 <!-- START FOOTER -->
